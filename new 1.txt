@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script language="javascript" type="text/javascript">
+function validateform(){
+
+if(document.register.firstname.value==""){
+window.alert("Please Provide a firstname");	
+document.register.firstname.focus();
+return false;
+}
+
+if(document.register.surname.value==""){
+window.alert("Please Provide a surname");
+document.register.surname.focus();	
+return false;
+}
+
+if(document.register.email.value==""){
+window.alert("Please Provide an email");
+document.register.email.focus();
+return false;
+}
+
+var x = document.register.email.value;
+var dotpos = x.lastIndexOf(".");
+var atpos = x.indexOf("@");
+
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+window.alert("Not a valid E-mail");
+document.register.email.focus();
+return false; 
+}
+
+
+if(document.register.password.value==""){
+window.alert("Please Provide a password");
+document.register.password.focus();
+return false;
+}
+
+else
+window.alert("Registration Complete");
+return true;
+}
+
+</script>
+</head>
+
+<body>
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+<input type="submit" value="Register" class="button" name="submit"> <p6><a href="Login.html" class="button"> Already have an account?</a></p6></center>
+</div>
+</form>
+</body>
+</html>
